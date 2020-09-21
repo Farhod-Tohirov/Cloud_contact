@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Online Lesson12</string>
+    <string name="topImage">topImage</string>
+    <string name="welcome_back">Welcome back</string>
+    <string name="save_your_contacts_to_cloud">Save your contacts to cloud</string>
+    <string name="user_name">user name</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="don_t_have_an_account">Don\'t have an account</string>
+    <string name="sing_up">Sing up</string>
+    <string name="forget_password">Forget Password?</string>
+    <string name="let_s_get_started">Let\'s Get Started</string>
+    <string name="create_an_account_to_cloud_contact_to_get_all_features">Create an account to Cloud Contact to get all features</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="login_here">Login here</string>
+    <string name="create">Create</string>
+    <string name="verification_code">Verification Code</string>
+    <string name="please_type_the_verification_code_sent_to">Please type the verification code sent to</string>
+    <string name="validate">Validate</string>
+    <string name="phone">Phone Number</string>
+    <string name="resend_code">Resend code</string>
+    <string name="send_code">Send Code</string>
+    <string name="new_password">New Password</string>
+    <string name="code">Code</string>
+    <string name="confirm">Confirm</string>
+
+    <string name="cancel">Cancel</string>
+    <string name="new_contact">New contact</string>
+    <string name="done">Done</string>
+    <string name="add_photo">Add photo</string>
+    <string name="name">name</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="name_of_account">Name</string>
+    <string name="subtext">sub text</string>
+    <string name="add_new_contact">Add new contact</string>
+    <string name="contacts">Contacts</string>
+    <string name="search">Search</string>
+    <string name="alertNull">Bo\'sh natija qaytdi. Iltimos serverga habar bering</string>
+    <string name="remember_me">Remember me</string>
+    <string name="leave">leave</string>
+    <string name="confirm_password">Confirm password</string>
+
+
+</resources>

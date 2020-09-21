@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    >
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/regToolbar"
+        app:navigationIcon="?attr/homeAsUpIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/topTextReg"
+        style="@style/TextBlackBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/let_s_get_started"
+        app:layout_constraintBottom_toBottomOf="@id/regToolbar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/topTegReg2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/create_an_account_to_cloud_contact_to_get_all_features"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topTextReg" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/firstNameArea"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:layout_marginTop="8dp"
+        app:hintEnabled="false"
+        app:layout_constraintBottom_toTopOf="@id/lastNameArea"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topTegReg2">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/regFirstName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_field_back"
+            android:drawableStart="@drawable/ic_person"
+            android:drawableLeft="@drawable/ic_person"
+            android:drawablePadding="8dp"
+            android:hint="@string/first_name"
+            android:inputType="textPersonName"
+            android:padding="16dp"
+            android:textColor="#2600FF" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/lastNameArea"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:hintEnabled="false"
+        app:layout_constraintBottom_toTopOf="@id/phoneArea"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/firstNameArea">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/regLastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_field_back"
+            android:drawableStart="@drawable/ic_person"
+            android:drawableLeft="@drawable/ic_person"
+            android:drawablePadding="8dp"
+            android:hint="@string/last_name"
+            android:inputType="textPersonName"
+            android:padding="16dp"
+            android:textColor="#2600FF" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:id="@+id/phoneArea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/login_field_back"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingTop="12dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintBottom_toTopOf="@id/passwordArea1"
+        app:layout_constraintTop_toBottomOf="@id/lastNameArea">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_phone" />
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/ccp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:ccp_autoDetectCountry="true"
+            app:ccp_contentColor="#2600FF"
+            app:ccp_countryAutoDetectionPref="SIM_LOCALE_NETWORK"
+            app:ccp_countryPreference="uzb"
+            app:ccp_hintExampleNumber="true"
+            app:ccp_hintExampleNumberType="FIXED_LINE"
+            app:ccp_rememberLastSelection="true"
+            app:ccp_showFlag="false"
+            app:ccp_textSize="16sp" />
+
+        <EditText
+            android:id="@+id/regPhone"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:inputType="phone"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="Phone"
+            android:textColor="#2600FF" />
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordArea1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:hintEnabled="false"
+        app:layout_constraintBottom_toTopOf="@id/passwordArea2"
+        app:layout_constraintTop_toBottomOf="@id/phoneArea"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="#2C7AD7">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/regPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_field_back"
+            android:drawableStart="@drawable/ic_secure"
+            android:drawableLeft="@drawable/ic_secure"
+            android:drawablePadding="8dp"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:padding="16dp"
+            android:textColor="#2C7AD7" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordArea2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:hintEnabled="false"
+        app:layout_constraintBottom_toTopOf="@id/buttonSaveUser"
+        app:layout_constraintTop_toBottomOf="@id/passwordArea1"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="#2C7AD7">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/regPasswordConfirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_field_back"
+            android:drawableStart="@drawable/ic_secure"
+            android:drawableLeft="@drawable/ic_secure"
+            android:drawablePadding="8dp"
+            android:hint="@string/confirm_password"
+            android:inputType="textPassword"
+            android:padding="16dp"
+            android:textColor="#2C7AD7" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/buttonSaveUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="36dp"
+        android:layout_marginRight="36dp"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/login_button_back"
+        android:text="@string/create"
+        android:textColor="#FFF"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/bottomText" />
+
+    <TextView
+        android:id="@+id/bottomText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/already_have_an_account"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/buttonLoginRegistration" />
+
+    <TextView
+        android:id="@+id/buttonLoginRegistration"
+        style="@style/ButtonWithAction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="@string/login_here"
+        android:textColor="#2C7AD7"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/bottomText"
+        app:layout_constraintLeft_toRightOf="@id/bottomText"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/bottomText" />
+
+    <View
+        android:id="@+id/backProgress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#B2000000" />
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/showProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:constraint_referenced_ids="backProgress, progress" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

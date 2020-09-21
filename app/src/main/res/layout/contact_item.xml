@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="2dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/contactImage"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="8dp"
+            android:cropToPadding="true"
+            android:src="@drawable/ic_baseline_account_circle_24"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/contactName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="@string/name_of_account"
+            android:textColor="#000"
+            app:layout_constraintBottom_toTopOf="@id/telephoneText"
+            app:layout_constraintLeft_toRightOf="@id/contactImage"
+            app:layout_constraintTop_toTopOf="@id/contactImage"
+            app:layout_constraintVertical_chainStyle="packed"
+            android:layout_marginStart="8dp" />
+
+        <TextView
+            android:id="@+id/telephoneText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/subtext"
+            app:layout_constraintBottom_toBottomOf="@id/contactImage"
+            app:layout_constraintLeft_toLeftOf="@id/contactName"
+            app:layout_constraintTop_toBottomOf="@id/contactName" />
+
+        <ImageButton
+            android:id="@+id/buttonMore"
+            style="@style/ButtonWithAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:src="@drawable/ic_baseline_more_vert_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>
